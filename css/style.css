@@ -1,0 +1,229 @@
+:root {
+    --accent: #111;
+    /* change as required */
+    --muted: #6c6c6c;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: "Playfair Display", Georgia, serif;
+    background: beige;
+}
+
+.background {
+    background: beige;
+}
+
+
+/* NAV */
+
+.site-nav {
+    z-index: 1050;
+    backdrop-filter: blur(6px);
+}
+
+.brand {
+    color: rgb(164, 115, 115);
+    letter-spacing: 5px;
+    font-size: 2.15rem;
+    font-weight: 700;
+}
+
+.brand:hover {
+    text-decoration: none;
+    color: maroon !important;
+    transition: ease-in-out 0.5s;
+}
+
+#navMain ul li a {
+    color: rgb(164, 115, 115) !important;
+    letter-spacing: 1px;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+#navMain ul li a:hover {
+    text-decoration: none;
+    color: maroon !important;
+    transition: ease-in-out 0.5s;
+}
+
+
+/* HERO */
+
+
+/* SECTION: About Us */
+
+.about {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#about-content {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+#about-content h2 {
+    font-size: 45px;
+    color: rgb(164, 115, 115);
+}
+
+#about-content p {
+    font-size: 18px;
+    word-spacing: 3px;
+}
+
+.about img {
+    width: 100%;
+}
+
+#about-img {
+    margin: 80px 0px 30px 0px;
+}
+
+
+/* Portfolio */
+
+.portfolio h2 {
+    color: rgb(164, 115, 115);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Contact Us */
+
+#contact-section {
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.contact-us-heading {
+    color: rgb(164, 115, 115);
+}
+
+.mail {
+    color: #171819;
+    text-decoration: none;
+}
+
+.mail:hover {
+    color: maroon;
+}
+
+.contact-detailed {
+    font-size: 18px;
+    font-weight: 50;
+    opacity: 0.7;
+}
+
+.inputbar {
+    margin: 4px;
+    border-bottom: 1px solid black;
+}
+
+.inputbar2 {
+    margin: 4px;
+}
+
+.inputbar input {
+    border: none !important;
+    background-color: beige !important;
+    padding: 15px;
+}
+
+.inputbar textarea {
+    border: none;
+    background-color: beige !important;
+    padding: 15px;
+    background: none;
+}
+
+.inputbar2 button {
+    border-radius: 100px;
+    background-color: #6c6c6c !important;
+    color: white;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.inputbar2 button:hover {
+    background-color: maroon !important;
+    color: white;
+    transition: 0.6s ease-in-out;
+}
+
+.inputbar input:focus,
+.inputbar textarea:focus {
+    outline: none !important;
+}
+
+
+/* FOOTER */
+
+footer.site-footer {
+    padding: 2rem 1rem;
+    background: #0b0b0b;
+    color: #ddd;
+}
+
+footer .brand {
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    opacity: .95;
+}
+
+footer .muted {
+    color: #a5a5a5;
+    font-size: .95rem;
+}
+
+.social-quick-links:hover {
+    color: maroon;
+    transition: 0.6s ease-in-out;
+}
+
+
+/* Small helpers */
+
+.nav-link {
+    color: #222 !important;
+    font-weight: 500;
+}
+
+.btn-outline-dark {
+    border-radius: 50px;
+    padding: .5rem 1.05rem;
+}
+
+
+/* Make images responsive and nicely cropped */
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
