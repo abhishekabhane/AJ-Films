@@ -35,17 +35,61 @@ body {
     transition: ease-in-out 0.5s;
 }
 
-#navMain ul li a {
+#navbarNav ul li a {
     color: rgb(164, 115, 115) !important;
     letter-spacing: 1px;
     font-size: 1.15rem;
     font-weight: 700;
 }
 
-#navMain ul li a:hover {
+#navbarNav ul li a:hover {
     text-decoration: none;
     color: maroon !important;
     transition: ease-in-out 0.5s;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(164, 115, 115);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler.collapsed span:nth-child(1) {
+    transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler.collapsed span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed span:nth-child(3) {
+    transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 
