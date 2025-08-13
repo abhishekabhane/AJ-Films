@@ -5,6 +5,10 @@
     --max-width: 1200px;
 }
 
+html {
+    overflow-x: hidden !important;
+}
+
 body {
     font-family: "Playfair Display", Georgia, serif;
     background: #FAF5F1;
@@ -21,6 +25,16 @@ body {
 .site-nav {
     z-index: 1050;
     backdrop-filter: blur(6px);
+}
+
+.logo-1 {
+    width: 30vh;
+    height: 15vh;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
 }
 
 .brand {
@@ -349,6 +363,10 @@ footer .muted {
     object-fit: cover;
 }
 
+iframe {
+    max-width: 100% !important;
+}
+
 @media only screen and (max-width: 768px) {
     body {
         overflow-x: hidden !important;
@@ -377,5 +395,13 @@ footer .muted {
     }
     #about-content {
         margin-top: unset;
+    }
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .logo-1 {
+        width: 22vh;
+        height: 11vh;
     }
 }
