@@ -293,6 +293,17 @@ body::before {
     border-radius: 7px;
 }
 
+.video-thumbnail2 {
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.video-thumbnail2 img {
+    width: 100%;
+    display: block;
+    border-radius: 7px;
+}
+
 .play-button {
     position: absolute;
     top: 50%;
@@ -310,7 +321,7 @@ body::before {
     text-transform: uppercase;
 }
 
-.video-container {
+.video1 {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -319,7 +330,7 @@ body::before {
     margin-bottom: 20px;
 }
 
-.video-container iframe {
+.video1 iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -327,7 +338,7 @@ body::before {
     height: 100%;
 }
 
-.video-container2 {
+.video2 {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -336,7 +347,7 @@ body::before {
     margin-bottom: 20px;
 }
 
-.video-container2 iframe {
+.video2 iframe {
     position: absolute;
     top: 0;
     left: 0;
