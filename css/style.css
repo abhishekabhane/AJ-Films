@@ -321,7 +321,8 @@ body::before {
     text-transform: uppercase;
 }
 
-.video1 {
+
+/* .video1 {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -336,9 +337,10 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-}
+} */
 
-.video2 {
+
+/* .video2 {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -353,7 +355,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-}
+} */
 
 .video-wrapper {
     margin-bottom: 20px;

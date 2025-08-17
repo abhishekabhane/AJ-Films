@@ -22,17 +22,33 @@ $('.carousel-testimonial').owlCarousel({
 })
 
 function loadVideo(containerId, videoId) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = `
-    <iframe width="100%" height="315"
-      src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  `;
-    container.previousElementSibling.style.display = "none";
+    document.querySelectorAll(".video-wrapper").forEach(wrapper => {
+        const thumb = wrapper.querySelector(".video-thumbnail, .video-thumbnail2");
+        const iframeContainer = wrapper.querySelector("div[id^='video']");
+
+        if (iframeContainer) {
+            iframeContainer.innerHTML = "";
+        }
+        if (thumb) {
+            thumb.style.display = "block";
+            thumb.style.transition = "ease-in-out 1s";
+        }
+    });
+
+    setTimeout(() => {
+        const container = document.getElementById(containerId);
+        container.innerHTML = `
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    `;
+        container.previousElementSibling.style.display = "none";
+    }, 500);
 }
+
 
 
 document.getElementById('year').textContent = new Date().getFullYear();
