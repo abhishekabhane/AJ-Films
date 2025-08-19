@@ -38,48 +38,19 @@ function loadVideo(containerId, videoId) {
     setTimeout(() => {
         const container = document.getElementById(containerId);
         container.innerHTML = `
-      <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
     `;
         container.previousElementSibling.style.display = "none";
     }, 500);
+
 }
-
-// document.getElementById("myForm").addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     fetch("https://script.google.com/macros/s/AKfycbxnPbBvRU8Hn3A9hrr8ENHT7MsPvzemXCuapeQtPDIGz8jtoptYLCZXurUMn3eUloL1/exec", {
-//         method: "POST",
-//         body: JSON.stringify({
-//             name: e.target.name.value,
-//             email: e.target.email.value,
-//             message: e.target.message.value
-//         }),
-//         headers: {
-//             "Content-Type": "application/json"
-//         }
-//     }).then(res => alert("Form submitted!"));
-// });
-
-// document.getElementById("myForm").addEventListener("submit", function(e) {
-//     e.preventDefault();
-
-//     const formData = new FormData(e.target);
-
-//     fetch("https://script.google.com/macros/s/AKfycbygIXl59x9VZClLR6e4sqhbiB0BXwgZHzBd6gvA-BX5IJ1hAkL_BqmXQDGKrtyJOMulkg/exec", {
-//             method: "POST",
-//             body: formData
-//         })
-//         .then(res => res.text())
-//         .then(data => {
-//             alert("Form submitted successfully!");
-//             e.target.reset();
-//         })
-//         .catch(err => alert("Error: " + err.message));
-// });
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbx84qCxBrRt3NX9PAO8c0htA-AsCQrBrzEwXzNnt_xAHBqC0oF3canGIzQAYk5OJEo8Jw/exec"; // paste your Apps Script web app URL
 
@@ -99,5 +70,40 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
         });
 });
 
+const menuToggle = document.querySelector('.menu-toggle');
+const panel = document.getElementById('nav-panel');
+const closeBtn = panel.querySelector('.close-btn');
+const links = panel.querySelectorAll('a');
+
+function openMenu() {
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
+
+menuToggle.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
+
+links.forEach(a => {
+    a.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 991.98px)').matches) closeMenu();
+    });
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+});
+
+window.addEventListener('resize', () => {
+    if (!window.matchMedia('(max-width: 991.98px)').matches) closeMenu();
+});
 
 document.getElementById('year').textContent = new Date().getFullYear();
