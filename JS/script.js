@@ -64,21 +64,39 @@ function loadVideo(containerId, videoId) {
 //     }).then(res => alert("Form submitted!"));
 // });
 
+// document.getElementById("myForm").addEventListener("submit", function(e) {
+//     e.preventDefault();
+
+//     const formData = new FormData(e.target);
+
+//     fetch("https://script.google.com/macros/s/AKfycbygIXl59x9VZClLR6e4sqhbiB0BXwgZHzBd6gvA-BX5IJ1hAkL_BqmXQDGKrtyJOMulkg/exec", {
+//             method: "POST",
+//             body: formData
+//         })
+//         .then(res => res.text())
+//         .then(data => {
+//             alert("Form submitted successfully!");
+//             e.target.reset();
+//         })
+//         .catch(err => alert("Error: " + err.message));
+// });
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbx84qCxBrRt3NX9PAO8c0htA-AsCQrBrzEwXzNnt_xAHBqC0oF3canGIzQAYk5OJEo8Jw/exec"; // paste your Apps Script web app URL
+
 document.getElementById("myForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const formData = new FormData(e.target);
 
-    fetch("https://script.google.com/macros/s/AKfycbygIXl59x9VZClLR6e4sqhbiB0BXwgZHzBd6gvA-BX5IJ1hAkL_BqmXQDGKrtyJOMulkg/exec", {
-            method: "POST",
-            body: formData
-        })
+    fetch(scriptURL, { method: "POST", body: formData })
         .then(res => res.text())
         .then(data => {
-            alert("Form submitted successfully!");
+            document.getElementById("success-message").style.display = "block";
             e.target.reset();
         })
-        .catch(err => alert("Error: " + err.message));
+        .catch(err => {
+            alert("Error: " + err.message);
+        });
 });
 
 
