@@ -49,6 +49,19 @@ function loadVideo(containerId, videoId) {
     }, 500);
 }
 
-
+document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch("https://script.google.com/macros/s/AKfycbxnPbBvRU8Hn3A9hrr8ENHT7MsPvzemXCuapeQtPDIGz8jtoptYLCZXurUMn3eUloL1/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value
+        }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(res => alert("Form submitted!"));
+});
 
 document.getElementById('year').textContent = new Date().getFullYear();
