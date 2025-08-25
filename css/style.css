@@ -23,7 +23,7 @@ html {
 } */
 
 body {
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Raleway", sans-serif;
     overflow-x: hidden !important;
 }
 
@@ -36,7 +36,7 @@ body::before {
     height: 100%;
     min-height: 100vh;
     /* background: rgba(43, 43, 43, 0.5); */
-    background-image: url(../images/about-us.jpg);
+    background-image: url(../images/about-us.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,7 +168,7 @@ body::before {
 .nav-inner {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 10px 16px;
+    padding: 10px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -185,13 +185,14 @@ body::before {
 } */
 
 .logo-1 {
-    width: 15vh;
-    height: 15vh;
+    width: 50vh;
+    height: 25vh;
 }
 
 .logo {
     width: 100%;
     height: 100%;
+    background: none;
 }
 
 .nav-panel {
@@ -217,6 +218,8 @@ body::before {
 
 .nav-links a:hover {
     color: #ab886d;
+    text-decoration: underline !important;
+    transition: 0.5s ease-in-out;
 }
 
 .menu-toggle {
@@ -410,7 +413,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
 }
 
 .home-content {
@@ -446,7 +449,7 @@ body::before {
 }
 
 .gry {
-    filter: grayscale(50%);
+    /* filter: grayscale(50%); */
 }
 
 .bg-video {
@@ -473,7 +476,7 @@ body::before {
 }
 
 .title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Raleway", sans-serif;
     font-size: 3rem;
     font-weight: 400;
     letter-spacing: 2px;
@@ -484,7 +487,7 @@ body::before {
 .subtitle {
     font-size: 1rem;
     line-height: 1.6;
-    font-family: 'YourBodyFont', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #e4e0e1;
 }
 
@@ -499,15 +502,16 @@ body::before {
 }
 
 .quote-title {
-    font-family: 'YourBodyFont', serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2rem;
+    font-weight: 400;
     letter-spacing: 0.1em;
     color: black !important;
     /* dark text */
 }
 
 .quote-writter {
-    font-family: 'YourBodyFont', sans-serif;
+    font-family: "Raleway", sans-serif;
     letter-spacing: 0.2em;
     font-size: 1.2rem;
     font-style: italic;
@@ -632,7 +636,8 @@ body::before {
     background: transparent !important;
     border: none;
     font-size: large;
-    font-weight: lighter;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
 }
 
 #tabs:hover {
@@ -761,7 +766,7 @@ body::before {
 .contact-detailed {
     color: #ab886d;
     font-size: 18px;
-    font-weight: 50;
+    font-weight: 400;
     opacity: 0.7;
 }
 
@@ -914,6 +919,10 @@ iframe {
         border-radius: 100px;
         padding: 10px 0;
         font-size: 15px;
+    }
+    .logo-1 {
+        width: 40vh;
+        height: 20vh;
     }
 }
 
