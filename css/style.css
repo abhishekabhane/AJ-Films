@@ -7,7 +7,15 @@
 html {
     overflow-x: hidden !important;
     font-family: "Playfair Display", Georgia, serif;
-    overscroll-behavior: none !important;
+    /* overscroll-behavior: none !important; */
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* iOS Safari specific rules */
+        overscroll-behavior: auto;
+        /* disable your override */
+    }
 }
 
 
