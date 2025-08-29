@@ -37,7 +37,7 @@ body::before {
     height: 100%;
     min-height: 100vh;
     /* background: rgba(43, 43, 43, 0.5); */
-    background-image: url(../images/about-us.JPG);
+    background-image: url(../images/about-us.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
