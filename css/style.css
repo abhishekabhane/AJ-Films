@@ -11,6 +11,7 @@ html {
 }
 
 @supports (-webkit-touch-callout: none) {
+    html,
     body {
         /* iOS Safari specific rules */
         overscroll-behavior: auto;
