@@ -10,14 +10,20 @@ html {
     /* overscroll-behavior: none !important; */
 }
 
-@supports (-webkit-touch-callout: none) {
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* @supports (-webkit-touch-callout: none) {
     html,
     body {
-        /* iOS Safari specific rules */
         overscroll-behavior: auto;
-        /* disable your override */
     }
-}
+} */
 
 
 /* body {
@@ -35,11 +41,12 @@ html {
 body {
     font-family: "Raleway", sans-serif;
     overflow-x: hidden !important;
+    position: relative;
 }
 
 body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
